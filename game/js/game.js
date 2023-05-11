@@ -232,8 +232,9 @@ function loadScreen(){
     setTimeout(() => {
         document.getElementById('main-game').classList.remove('d-none');
         document.getElementById('header').classList.remove('d-none');
-        document.getElementById('loader').classList.add('d-none');
-        document.getElementById('loader2').classList.add('d-none');
+        document.getElementById('rotatePhone').classList.remove('d-none');
+        document.getElementById('rotate').classList.remove('d-none');
+        document.getElementById('loadScreen').classList.add('d-none');
         document.getElementById('body').classList.add('background-image');
     }, 3000);
    };

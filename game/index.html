@@ -32,19 +32,26 @@
 </head>
 
 <body onload="loadScreen()" id="body">
-    
-    <div class="loader" id="loader">
-        <div class="inner" id="loader2">
+
+    <div id="loadScreen">
+        <div id="loadScreenHeadSection">
+        <h2 id="loadScreenHeader">EL POLLO LOCO </h2>
+        <img id="loadScreenImage" src="./img/2_character_pepe/3_jump/J-36.png">
         </div>
-      </div>
+
+        <div class="loader" id="loader">
+            Loading
+        </div>
+    </div>
+    
 
 
 
-    <h1 class="d-none" id="header">El Pollo Loco</h1>
+    <h1 class="d-none" id="header">EL POLLO LOCO</h1>
 
-    <div id="rotatePhone">
+    <div id="rotatePhone" class="d-none">
         <img src="./img/rotate.webp">
-        <p>Please rotate your device</p>
+        <p id="rotate" class="d-none">Please rotate your device</p>
     </div>
 
     <div id="main-game" class="main-game d-none">
