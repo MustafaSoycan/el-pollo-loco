@@ -1,0 +1,570 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    background-position: center;
+    font-size: 54px;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.background-image{
+    background-image: url('img/desert.png');
+}
+
+@font-face {
+    font-family: 'zabras';
+    src: url('./fonts/zabras.ttf') format('truetype');
+}
+
+h1 {
+    font-size: 64px;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 10px;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+
+}
+
+.control {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.infoControl {
+    position: absolute;
+    max-width: 720px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+}
+
+.openControl {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 30px;
+    font-size: 25px;
+    box-sizing: border-box;
+    margin: 50px;
+    letter-spacing: normal;
+    text-shadow: none;
+    background-color: #ec840c;
+    border-radius: 20px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.main-game {
+    position: relative;
+}
+
+#main-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 5;
+    width: 100%;
+    padding-top: 25px;
+}
+
+#keys {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#keys img {
+    height: 80px;
+    width: 100px;
+}
+
+
+.close img {
+    height: 50px;
+    opacity: 1.0;
+}
+
+.close img:hover {
+    opacity: 0.5;
+}
+
+.colloumn {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: #f7814a;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 32px;
+    cursor: pointer;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #fc996c;
+    cursor: pointer;
+}
+
+.start-screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+}
+
+.start-screen img {
+    position: absolute;
+    max-width: 720px;
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+
+.end-screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.end-screen img {
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+
+
+#stats {
+    /* position: absolute; */
+    /* bottom: 20px; */
+    /* right: 20px; */
+    /* left: 20px; */
+    z-index: 8;
+    color: white;
+    margin-top: 310px;
+}
+
+
+#openControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#restart {
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    color: white;
+    position: absolute;
+    bottom: -20px;;
+    right: 20px;
+    left: 20px
+}
+
+.ingameButtons {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    gap: 20px;
+}
+
+.ingameBtn {
+    color: white;
+    border-radius: 20px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.ingameBtn img {
+    height: 30px;
+}
+
+.ingameBtnEnd {
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 32px;
+    background-color: #f16e31;
+}
+
+.ingameBtnEnd2 {
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 32px;
+    background-color: #f16e31;
+    margin-top: 15px;
+}
+
+
+.ingameBtnEnd:hover {
+    background-color: #f7814a;
+}
+
+.ingameBtnEnd2:hover {
+    background-color: #f7814a;
+}
+
+
+
+.ingame-btns-bottom {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    width: 97%;
+    margin-left: 12px;
+    margin-bottom: 6px;
+}
+
+#buttons-for-mobile img {
+    height: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#buttons-for-mobile {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    display: none;
+}
+
+.walk {
+    display: flex;
+    gap: 20px;
+}
+
+.jump-throw {
+    display: flex;
+    gap: 20px;
+}
+
+#rotatePhone{
+    display: flex;
+    justify-content: center;
+    display: none;
+    height: 300px; 
+    text-align: center;
+}
+
+#rotatePhone img{
+    height: 300px;
+}
+
+#rotatePhone p{
+    margin-bottom: 20px;
+}
+
+.button-87 {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-87:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .button-87:active {
+    transform: scale(0.95);
+  }
+/* ---- SMARTPHONES -------*/
+
+@media (max-width: 500px) {
+    #main-game{
+        display: none;
+    }
+
+    #rotatePhone{
+        display: block !important;
+    }
+}
+
+
+
+
+@media (max-width: 710px) {
+    canvas {
+        width: 100%;
+    }
+
+    #buttons-for-mobile {
+        display: flex;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    #buttons-for-mobile img {
+        height: 20px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #buttons-for-mobile img {
+        height: 15px;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+@media only screen and (max-height: 480px) {
+    canvas {
+        height: 100vh;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    #buttons-for-mobile{
+        display: flex;
+    }
+
+}
+
+
+/*/ LOADING SCREEN /*/
+
+body {
+    background: #262E2A;
+    overflow: hidden;
+  }
+  
+  .loader {
+    animation: spin 1.5s linear alternate infinite;
+    background: #B73F41;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+  }
+  
+  .loader:before {
+    background: #B73F41;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    z-index: 2;
+  }
+  
+  .loader:after {
+    background: #262E2A;
+    border-radius: 50%;
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -4.02em #262E2A,
+      2.25em -1.25em #262E2A,
+      4.60em 0em #262E2A,
+      2.25em 1.25em #262E2A,
+      2.25em 4.02em #262E2A,
+      0em 2.60em #262E2A,
+      -2.25em 4.02em #262E2A,
+      -2.25em 1.25em #262E2A,
+      -4.60em 0em #262E2A,
+      -2.25em -1.25em #262E2A,
+      -2.25em -4.02em #262E2A;
+    content: '';
+    display: block;
+    height: 2em;
+    width: 2em;
+  }
+  
+  .inner {
+    animation: load 1.5s linear alternate infinite;
+    border: solid 1px #B73F41;
+    border-radius: 50%;
+    height: 1.75em;
+    width: 1.75em;
+    z-index: 1;
+  }
+  
+  .loader, .loader:before, .loader:after, .inner {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  @keyframes load {
+    0% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em rgb(234,95,0),
+        2.25em 1.25em rgb(234,95,0),
+        0em 2.60emrgb(234,95,0)A,
+        -2.25em 1.25em rgb(234,95,0),
+        -2.25em -1.25em rgb(234,95,0);
+    }
+    15% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em rgb(234,95,0),
+        2.25em 1.25em rgb(234,95,0),
+        0em 2.60em rgb(234,95,0),
+        -2.25em 1.25em rgb(234,95,0),
+        -2.25em -1.25em #B73F41;
+    }
+    30% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em rgb(234,95,0),
+        2.25em 1.25em rgb(234,95,0),
+        0em 2.60em rgb(234,95,0),
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+    45% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em rgb(234,95,0),
+        2.25em 1.25em rgb(234,95,0),
+        0em 2.60em #B73F41,
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+    60% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em rgb(234,95,0),
+        2.25em 1.25em #B73F41,
+        0em 2.60em #B73F41,
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+    75% {
+      box-shadow: 0em -2.60em rgb(234,95,0),
+        2.25em -1.25em #B73F41,
+        2.25em 1.25em #B73F41,
+        0em 2.60em #B73F41,
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+    90% {
+      box-shadow: 0em -2.60em #B73F41,
+        2.25em -1.25em #B73F41,
+        2.25em 1.25em #B73F41,
+        0em 2.60em #B73F41,
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+    100% {
+      box-shadow: 0em -2.60em #B73F41,
+        2.25em -1.25em #B73F41,
+        2.25em 1.25em #B73F41,
+        0em 2.60em #B73F41,
+        -2.25em 1.25em #B73F41,
+        -2.25em -1.25em #B73F41;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(60deg);
+    }
+    30% {
+      transform: rotate(120deg);
+    }
+    45% {
+      transform: rotate(180deg);
+    }
+    60% {
+      transform: rotate(240deg);
+    }
+    75% {
+      transform: rotate(300deg);
+    }
+    90% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
